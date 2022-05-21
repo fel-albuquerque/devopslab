@@ -24,6 +24,9 @@ jobs:
               
       - name: Unit Test
         run: python -m unittest -v test
+        
+      - name: Qualitygate
+        run: sonar.qualitygate.wait=true
 
   Deploy:
     needs: Build
